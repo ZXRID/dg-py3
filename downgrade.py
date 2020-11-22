@@ -37,7 +37,7 @@ class DownGrade_PY:
         with open('python_3.8.6.deb','wb') as download:
             download.write(requests.get(self.url + link + data_1).content)
         print ('[*] Download complete, installing...')
-        os.system('pkg install ./python_3.8.6.deb -y')
+        os.system('pkg install ./python_3.8.6.deb --allow-downgrades -y')
         exit ('[*] Downgrade success!')
 
 DownGrade_PY()
